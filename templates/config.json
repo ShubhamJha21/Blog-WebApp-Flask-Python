@@ -2,12 +2,12 @@
   "param":
 {
   "localhost":"True",
-  "local_server":"mysql://root:@localhost/shubhprogramming",
-  "prod_server": "mysql://root:@localhost/shubhprogramming",
+  "local_server":"mysql://root:@localhost/Your DataBase Name",
+  "prod_server": "mysql://root:@localhost/Your DataBase Name",
   "tw_url": "twitter url",
   "my_gmail": "yourgmail@gmail.com",
   "pass": "your gmail password",
-  "aboutme":"Hii My Name ISs ",
+  "aboutme":"Hii My Name Shubham Jha ",
   "noofposts":2,
   "admin_user": "anything",
   "admin_password":"your password",
