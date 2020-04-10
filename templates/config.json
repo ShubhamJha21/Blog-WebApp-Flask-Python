@@ -1,0 +1,16 @@
+{
+  "param":
+{
+  "localhost":"True",
+  "local_server":"mysql://root:@localhost/shubhprogramming",
+  "prod_server": "mysql://root:@localhost/shubhprogramming",
+  "tw_url": "twitter url",
+  "my_gmail": "yourgmail@gmail.com",
+  "pass": "your gmail password",
+  "aboutme":"Hii My Name ISs ",
+  "noofposts":2,
+  "admin_user": "anything",
+  "admin_password":"your password",
+  "upload_location": "C:\\Users\\MY PC\\PycharmProjects\\TheShubhCode web design\\static"
+}
+}

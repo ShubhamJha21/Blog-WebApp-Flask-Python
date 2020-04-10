@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+
+  
+ 
+
+
+  <title>dashboard</title>
+ 
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static',filename='css/clean-blog.min.css')}}" rel="stylesheet">
+
+</head>
+
+  <!-- Page Header -->
+
+ 
+
+  <body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar navbar-light" id="main"style="background-color: #e3f2fd;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Maths & Code Never Lies</a>
+   
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/contact">Contact<span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+  </div>
+</div>
+</nav>
+  <!-- Post Content -->
+ 
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Basic Actions</h1>
+          
+           <a href="/edit/0">  <button class="btn btn-primary"> Add a new post</button></a>
+           <a href="/logout">  <button class="btn btn-primary"> Logout</button></a>
+<hr>
+          <h1>Upload A File</h1>
+          
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+              
+<input type="file" name="file1">
+<button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+          <hr>
+<h1>Edit Posts</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      {% for post in posts %}
+      <tr>
+        <td>{{post.sno}}</td>
+        <td>{{post.Title}}</td>
+        <td>{{post.date}}</td>
+        <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary" >Edit</button></a></td>
+        <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary">Delete</button></a></td>
+      </tr>
+      
+
+      {% endfor %}
+
+
+
+
+
+    </tbody>
+  </table>
+
+
+      
+        </div>
+      </div>
+    </div>
+  
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="{{param['tw_url']}}" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{{param['tag_line']}}" >
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item"> 
+              <a href="{{param['tag_line']}}">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; 2020-21 ShubhCoding.com </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{url_for('static',filename='js/clean-blog.min.js')}}"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+ 
